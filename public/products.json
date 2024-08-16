@@ -7,7 +7,8 @@
     "Price": 799.99,
     "Category": "Smartphone",
     "Ratings": 4.5,
-    "CreationDate": "2024-08-15T10:30:00Z"
+    "CreationDate": "2024-08-15T10:30:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P002",
@@ -17,7 +18,8 @@
     "Price": 1999.99,
     "Category": "Laptop",
     "Ratings": 4.8,
-    "CreationDate": "2024-08-14T15:45:00Z"
+    "CreationDate": "2024-08-14T15:45:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P003",
@@ -27,7 +29,8 @@
     "Price": 349.99,
     "Category": "Headphones",
     "Ratings": 4.7,
-    "CreationDate": "2024-08-13T12:20:00Z"
+    "CreationDate": "2024-08-13T12:20:00Z",
+    "BrandName":"Sony"
   },
   {
     "Id": "P004",
@@ -37,7 +40,8 @@
     "Price": 1299.99,
     "Category": "Laptop",
     "Ratings": 4.6,
-    "CreationDate": "2024-08-12T09:10:00Z"
+    "CreationDate": "2024-08-12T09:10:00Z",
+    "BrandName":"Dell"
   },
   {
     "Id": "P005",
@@ -47,7 +51,8 @@
     "Price": 1299.99,
     "Category": "Television",
     "Ratings": 4.7,
-    "CreationDate": "2024-08-11T18:30:00Z"
+    "CreationDate": "2024-08-11T18:30:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P006",
@@ -57,7 +62,8 @@
     "Price": 1099.99,
     "Category": "Smartphone",
     "Ratings": 4.9,
-    "CreationDate": "2024-08-10T14:40:00Z"
+    "CreationDate": "2024-08-10T14:40:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P007",
@@ -67,7 +73,8 @@
     "Price": 299.99,
     "Category": "Speaker",
     "Ratings": 4.4,
-    "CreationDate": "2024-08-09T13:00:00Z"
+    "CreationDate": "2024-08-09T13:00:00Z",
+    "BrandName":"Bose"
   },
   {
     "Id": "P008",
@@ -77,7 +84,8 @@
     "Price": 499.99,
     "Category": "Gaming Console",
     "Ratings": 4.9,
-    "CreationDate": "2024-08-08T17:25:00Z"
+    "CreationDate": "2024-08-08T17:25:00Z",
+    "BrandName":"Sony"
   },
   {
     "Id": "P009",
@@ -87,7 +95,8 @@
     "Price": 999.99,
     "Category": "Tablet",
     "Ratings": 4.6,
-    "CreationDate": "2024-08-07T11:15:00Z"
+    "CreationDate": "2024-08-07T11:15:00Z",
+    "BrandName":"Microsoft"
   },
   {
     "Id": "P010",
@@ -97,7 +106,8 @@
     "Price": 249.99,
     "Category": "Earbuds",
     "Ratings": 4.8,
-    "CreationDate": "2024-08-06T09:00:00Z"
+    "CreationDate": "2024-08-06T09:00:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P011",
@@ -107,7 +117,8 @@
     "Price": 699.99,
     "Category": "Tablet",
     "Ratings": 4.5,
-    "CreationDate": "2024-08-05T16:40:00Z"
+    "CreationDate": "2024-08-05T16:40:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P012",
@@ -117,7 +128,8 @@
     "Price": 449.99,
     "Category": "Monitor",
     "Ratings": 4.7,
-    "CreationDate": "2024-08-04T14:15:00Z"
+    "CreationDate": "2024-08-04T14:15:00Z",
+    "BrandName":"LG"
   },
   {
     "Id": "P013",
@@ -127,7 +139,8 @@
     "Price": 499.99,
     "Category": "Camera",
     "Ratings": 4.6,
-    "CreationDate": "2024-08-03T10:25:00Z"
+    "CreationDate": "2024-08-03T10:25:00Z",
+    "BrandName":"GoPro"
   },
   {
     "Id": "P014",
@@ -137,7 +150,8 @@
     "Price": 399.99,
     "Category": "Smartwatch",
     "Ratings": 4.8,
-    "CreationDate": "2024-08-02T12:45:00Z"
+    "CreationDate": "2024-08-02T12:45:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P015",
@@ -147,7 +161,8 @@
     "Price": 1999.99,
     "Category": "Camera",
     "Ratings": 4.7,
-    "CreationDate": "2024-08-01T16:20:00Z"
+    "CreationDate": "2024-08-01T16:20:00Z",
+    "BrandName":"Nikon"
   },
   {
     "Id": "P016",
@@ -157,7 +172,8 @@
     "Price": 249.99,
     "Category": "Smart Speaker",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-31T15:10:00Z"
+    "CreationDate": "2024-07-31T15:10:00Z",
+    "BrandName":"Amazon"
   },
   {
     "Id": "P017",
@@ -167,7 +183,8 @@
     "Price": 799.99,
     "Category": "Drone",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-30T14:00:00Z"
+    "CreationDate": "2024-07-30T14:00:00Z",
+    "BrandName":"DJI"
   },
   {
     "Id": "P018",
@@ -177,7 +194,8 @@
     "Price": 2299.99,
     "Category": "Laptop",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-29T13:50:00Z"
+    "CreationDate": "2024-07-29T13:50:00Z",
+    "BrandName":"Razer"
   },
   {
     "Id": "P019",
@@ -187,7 +205,8 @@
     "Price": 179.99,
     "Category": "Fitness Tracker",
     "Ratings": 4.5,
-    "CreationDate": "2024-07-28T12:35:00Z"
+    "CreationDate": "2024-07-28T12:35:00Z",
+    "BrandName":"Fitbit"
   },
   {
     "Id": "P020",
@@ -197,7 +216,8 @@
     "Price": 1599.99,
     "Category": "Laptop",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-27T16:45:00Z"
+    "CreationDate": "2024-07-27T16:45:00Z",
+    "BrandName":"Asus"
   },
   {
     "Id": "P021",
@@ -207,7 +227,8 @@
     "Price": 1499.99,
     "Category": "Laptop",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-26T11:55:00Z"
+    "CreationDate": "2024-07-26T11:55:00Z",
+    "BrandName":"HP"
   },
   {
     "Id": "P022",
@@ -217,7 +238,8 @@
     "Price": 1099.99,
     "Category": "Tablet",
     "Ratings": 4.9,
-    "CreationDate": "2024-07-25T09:20:00Z"
+    "CreationDate": "2024-07-25T09:20:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P023",
@@ -227,7 +249,8 @@
     "Price": 329.99,
     "Category": "Smartwatch",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-24T10:15:00Z"
+    "CreationDate": "2024-07-24T10:15:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P024",
@@ -237,7 +260,8 @@
     "Price": 3899.99,
     "Category": "Camera",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-23T13:45:00Z"
+    "CreationDate": "2024-07-23T13:45:00Z",
+    "BrandName":"Canon"
   },
   {
     "Id": "P025",
@@ -247,7 +271,8 @@
     "Price": 1299.99,
     "Category": "Smartphone",
     "Ratings": 4.5,
-    "CreationDate": "2024-07-22T11:00:00Z"
+    "CreationDate": "2024-07-22T11:00:00Z",
+    "BrandName":"Sony"
   },
   {
     "Id": "P026",
@@ -257,7 +282,8 @@
     "Price": 1499.99,
     "Category": "Monitor",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-21T09:30:00Z"
+    "CreationDate": "2024-07-21T09:30:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P027",
@@ -267,7 +293,8 @@
     "Price": 1799.99,
     "Category": "Camera",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-20T14:50:00Z"
+    "CreationDate": "2024-07-20T14:50:00Z",
+    "BrandName":"Sony"
   },
   {
     "Id": "P028",
@@ -277,7 +304,8 @@
     "Price": 699.99,
     "Category": "Desktop",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-19T12:05:00Z"
+    "CreationDate": "2024-07-19T12:05:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P029",
@@ -287,7 +315,8 @@
     "Price": 899.99,
     "Category": "Smartphone",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-18T11:10:00Z"
+    "CreationDate": "2024-07-18T11:10:00Z",
+    "BrandName":"Google"
   },
   {
     "Id": "P030",
@@ -297,7 +326,8 @@
     "Price": 329.99,
     "Category": "Headphones",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-17T08:40:00Z"
+    "CreationDate": "2024-07-17T08:40:00Z",
+    "BrandName":"Bose"
   },
   {
     "Id": "P031",
@@ -307,7 +337,8 @@
     "Price": 429.99,
     "Category": "Smartphone",
     "Ratings": 4.5,
-    "CreationDate": "2024-07-16T15:25:00Z"
+    "CreationDate": "2024-07-16T15:25:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P032",
@@ -317,7 +348,8 @@
     "Price": 1499.99,
     "Category": "Television",
     "Ratings": 4.9,
-    "CreationDate": "2024-07-15T17:50:00Z"
+    "CreationDate": "2024-07-15T17:50:00Z",
+    "BrandName":"LG"
   },
   {
     "Id": "P033",
@@ -327,7 +359,8 @@
     "Price": 199.99,
     "Category": "Earbuds",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-14T11:30:00Z"
+    "CreationDate": "2024-07-14T11:30:00Z",
+    "BrandName":"Samsung"
   },
   {
     "Id": "P034",
@@ -337,7 +370,8 @@
     "Price": 99.99,
     "Category": "Accessories",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-13T09:45:00Z"
+    "CreationDate": "2024-07-13T09:45:00Z",
+    "BrandName":"Apple"
   },
   {
     "Id": "P035",
@@ -347,7 +381,8 @@
     "Price": 99.99,
     "Category": "Mouse",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-12T14:35:00Z"
+    "CreationDate": "2024-07-12T14:35:00Z",
+    "BrandName":"Logitech"
   },
   {
     "Id": "P036",
@@ -357,7 +392,8 @@
     "Price": 199.99,
     "Category": "Streaming Device",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-11T13:00:00Z"
+    "CreationDate": "2024-07-11T13:00:00Z",
+    "BrandName":"NVIDIA"
   },
   {
     "Id": "P037",
@@ -367,7 +403,8 @@
     "Price": 49.99,
     "Category": "Streaming Device",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-10T10:50:00Z"
+    "CreationDate": "2024-07-10T10:50:00Z",
+    "BrandName":"Roku"
   },
   {
     "Id": "P038",
@@ -377,7 +414,8 @@
     "Price": 349.99,
     "Category": "Headphones",
     "Ratings": 4.8,
-    "CreationDate": "2024-07-09T15:15:00Z"
+    "CreationDate": "2024-07-09T15:15:00Z",
+    "BrandName":"Sony"
   },
   {
     "Id": "P039",
@@ -387,7 +425,8 @@
     "Price": 1249.99,
     "Category": "Laptop",
     "Ratings": 4.7,
-    "CreationDate": "2024-07-08T12:25:00Z"
+    "CreationDate": "2024-07-08T12:25:00Z",
+    "BrandName":"Dell"
   },
   {
     "Id": "P040",
@@ -397,6 +436,7 @@
     "Price": 99.99,
     "Category": "Smart Home",
     "Ratings": 4.6,
-    "CreationDate": "2024-07-07T11:45:00Z"
+    "CreationDate": "2024-07-07T11:45:00Z",
+    "BrandName":"Google"
   }
 ]
