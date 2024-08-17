@@ -22,7 +22,6 @@ const Cart = () => {
 
   if (loading) return <Loading></Loading>;
 
-  console.log(cartProducts);
   return (
     <div>
       <div className="overflow-x-auto">
@@ -41,17 +40,17 @@ const Cart = () => {
           </thead>
           <tbody>
             {cartProducts.map((product, idx) => (
-              <tr>
+              <tr key={idx}>
                 <th>{idx + 1}</th>
                 <td>
-                    <div className="avatar">
-                      <div className="h-12 w-12">
-                        <img
-                          src={product?.Product?.ProductImage}
-                          alt={product?.Product?.ProductName}
-                        />
-                      </div>
+                  <div className="avatar">
+                    <div className="h-12 w-12">
+                      <img
+                        src={product?.Product?.ProductImage}
+                        alt={product?.Product?.ProductName}
+                      />
                     </div>
+                  </div>
                 </td>
                 <td>{product?.Product?.ProductName}</td>
                 <td>{product?.Product?.Price}</td>

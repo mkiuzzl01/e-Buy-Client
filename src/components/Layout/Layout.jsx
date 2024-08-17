@@ -7,10 +7,10 @@ const Layout = () => {
   return (
     <div>
      <div className="max-w-7xl m-auto">
-     <header>
+     <header className="sticky top-0 z-10">
         <Navbar></Navbar>
       </header>
-      <main className="min-h-[calc(100vh-246px)]">
+      <main className="min-h-[calc(100vh-205px)]">
         <Outlet></Outlet>
       </main>
      </div>

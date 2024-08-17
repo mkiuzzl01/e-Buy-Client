@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const { loginUser } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -14,7 +15,7 @@ const Login = () => {
 
     try {
       await loginUser(Email, Pass);
-      navigate("/");
+      navigate(location?.location?.state ? location?.state?.from?.pathname : "/");
     } catch (error) {
       console.log(error.message);
     }
@@ -22,7 +23,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="max-w-2xl bg-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-2xl bg-white p-8 rounded-lg border-2 border-accent shadow-lg">
         <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-2/5 mb-8 lg:mb-0">
             <h1 className="text-center lg:text-left">
@@ -35,7 +36,7 @@ const Login = () => {
             <p className="mt-10">
               Have't account{" "}
               <Link to="/Register">
-                <span className="underline">Register</span>
+                <span className="underline text-cyan-600">Register</span>
               </Link>
             </p>
           </div>

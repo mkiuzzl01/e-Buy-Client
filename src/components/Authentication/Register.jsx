@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
   const { registerUser, profileUpdate, setLoading, setUser } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ const Register = () => {
       await setUser(Email, Pass, Name, Photo_URL);
 
       await setLoading(false);
-      navigate("/");
+      navigate(location ? location?.state?.from?.pathname : "/");
     } catch (error) {
       console.log(error.message);
     }
@@ -29,7 +30,7 @@ const Register = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="max-w-5xl bg-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-5xl bg-white p-8 rounded-lg border-2 border-accent shadow-lg">
         <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-2/5 mb-8 lg:mb-0">
             <h1 className="text-center lg:text-left">
@@ -41,7 +42,7 @@ const Register = () => {
             </h1>
             <p className="pt-10">
               Have an account{" "}
-              <span className="underline">
+              <span className="underline text-cyan-600">
                 <Link to="/Login">Login</Link>
               </span>
             </p>

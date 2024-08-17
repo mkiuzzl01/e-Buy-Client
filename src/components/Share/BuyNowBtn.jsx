@@ -2,18 +2,21 @@ import React from "react";
 import useAuth from "../../Hooks/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const BuyNowBtn = ({ Product }) => {
   const { user } = useAuth();
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
 
   const handleBuy = async (Product) => {
+    if (!user) return navigate('/Login')
     const userEmail = user?.email;
     const info = { userEmail, Product };
 
     try {
       const { data } = await axiosPublic.post("/add-cart", info);
-      if(data.insertedId){
+      if (data.insertedId) {
         Swal.fire({
           position: "center",
           icon: "success",
@@ -21,12 +24,12 @@ const BuyNowBtn = ({ Product }) => {
           showConfirmButton: false,
           timer: 1500,
         });
-      };
+      }
     } catch (error) {
       Swal.fire({
         position: "center",
         icon: "error",
-        title:error?.message,
+        title: error?.message,
         showConfirmButton: false,
         timer: 1500,
       });
