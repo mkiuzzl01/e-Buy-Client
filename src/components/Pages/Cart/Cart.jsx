@@ -4,6 +4,7 @@ import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import useAuth from "../../../Hooks/useAuth";
 import Loading from "../../Share/Loading";
 import PaymentBtn from "../../Share/PaymentBtn";
+import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   const { user, setLoading, loading } = useAuth();
@@ -24,6 +25,9 @@ const Cart = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>e-Buy | Cart </title>
+      </Helmet>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

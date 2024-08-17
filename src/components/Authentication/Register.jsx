@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { registerUser, profileUpdate, setLoading, setUser } = useAuth();
@@ -22,14 +24,35 @@ const Register = () => {
       await setUser(Email, Pass, Name, Photo_URL);
 
       await setLoading(false);
-      navigate(location ? location?.state?.from?.pathname : "/");
+
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Register Successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      navigate(
+        location?.location?.state ? location?.state?.from?.pathname : "/"
+      );
     } catch (error) {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: error?.message,
+        showConfirmButton: false,
+        timer: 1500,
+      });
       console.log(error.message);
     }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen">
+      <Helmet>
+        <title>e-Buy | Register </title>
+      </Helmet>
       <div className="max-w-5xl bg-white p-8 rounded-lg border-2 border-accent shadow-lg">
         <div className="flex flex-col lg:flex-row lg:items-center">
           <div className="w-full lg:w-2/5 mb-8 lg:mb-0">

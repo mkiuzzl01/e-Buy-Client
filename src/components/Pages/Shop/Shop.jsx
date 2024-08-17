@@ -5,6 +5,7 @@ import Loading from "../../Share/Loading";
 import Filter_Modal from "../../Share/Filter_Modal";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import useAuth from "../../../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Shop = () => {
   const { setLoading, loading } = useAuth();
@@ -59,10 +60,13 @@ const Shop = () => {
     setCurrentPage(value);
   };
 
-  if(loading) return <Loading></Loading>
+  if (loading) return <Loading></Loading>;
 
   return (
     <div className="my-10">
+      <Helmet>
+        <title>e-Buy | Shop </title>
+      </Helmet>
       <div className="m-4">
         <form onSubmit={handleSearch}>
           <div className="flex items-center ">

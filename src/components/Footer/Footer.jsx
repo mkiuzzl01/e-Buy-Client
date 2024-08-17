@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer footer-center bg-[#2E4F4F] text-white p-4">
       <div className="max-w-7xl m-auto">
-        <h1 className="text-4xl">e-Buy</h1>
+        <h1 className="text-4xl">e-B<span className="text-orange-400">u</span>y</h1>
         <div className="space-x-4">
           <Link to='/'>Home</Link>
           <Link to='/Shop'>Shop</Link>

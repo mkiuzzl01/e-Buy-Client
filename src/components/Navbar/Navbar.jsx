@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { Tooltip } from "react-tooltip";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -21,8 +22,15 @@ const Navbar = () => {
     </>
   );
 
-  const handleLogout = () => {
-    logOut();
+  const handleLogout = async () => {
+    await logOut();
+    Swal.fire({
+      position: "center",
+      icon: "warning",
+      title: "Logout Successful",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
   return (
     <div>
@@ -52,7 +60,11 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">e-buy</a>
+          <Link to="/" className="btn btn-ghost text-4xl">
+            <p>
+              e-B<span className="text-orange-300">u</span>y
+            </p>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-4">{navLink}</ul>

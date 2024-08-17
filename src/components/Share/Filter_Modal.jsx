@@ -90,23 +90,10 @@ const Filter_Modal = ({ isOpen, setIsOpen, setFilter }) => {
             <div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <select
-                  name="Brand"
-                  className="select select-bordered select-info w-full"
-                >
-                  <option disabled selected>
-                    Select Brand
-                  </option>
-                  {brandNames.map((brandName, idx) => (
-                    <option value={brandName} key={idx}>
-                      {brandName}
-                    </option>
-                  ))}
-                </select>
-                <select
                   name="Category"
                   className="select select-bordered select-info w-full"
                 >
-                  <option disabled selected>
+                  <option value="" disabled selected>
                     Select Category
                   </option>
                   {categories.map((Category, idx) => (
@@ -116,10 +103,23 @@ const Filter_Modal = ({ isOpen, setIsOpen, setFilter }) => {
                   ))}
                 </select>
                 <select
+                  name="Brand"
+                  className="select select-bordered select-info w-full"
+                >
+                  <option value="" disabled selected>
+                    Select Brand
+                  </option>
+                  {brandNames.map((brandName, idx) => (
+                    <option value={brandName} key={idx}>
+                      {brandName}
+                    </option>
+                  ))}
+                </select>
+                <select
                   name="Price"
                   className="select select-bordered select-info w-full"
                 >
-                  <option disabled selected>
+                  <option value="" disabled selected>
                     Select Price Range
                   </option>
                   {priceRange.map((price, idx) => (
