@@ -56,7 +56,7 @@ const RecentProductsBanner = () => {
             </p>
             <div className="flex items-center justify-around">
               <ViewDetailsBtn Product={Product}></ViewDetailsBtn>
-              <BuyNowBtn></BuyNowBtn>
+              <BuyNowBtn Product={Product}></BuyNowBtn>
             </div>
           </div>
         ))}

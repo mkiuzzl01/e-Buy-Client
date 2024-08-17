@@ -25,7 +25,7 @@ const ProductCard = ({ Product }) => {
           </div>
           <div className="card-actions justify-between items-center">
            <ViewDetailsBtn Product={Product}></ViewDetailsBtn>
-           <BuyNowBtn></BuyNowBtn>
+           <BuyNowBtn Product={Product}></BuyNowBtn>
           </div>
         </div>
       </div>

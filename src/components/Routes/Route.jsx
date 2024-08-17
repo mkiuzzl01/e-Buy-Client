@@ -6,36 +6,37 @@ import Cart from "../Pages/Cart/Cart";
 import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
 import View_Details from "../Pages/View_Details/View_Details";
+import PrivateRoute from "./PrivateRoute";
 
 export const route = createBrowserRouter([
-    {
-        path:'/',
-        element: <Layout></Layout>,
-        children:[
-            {
-                path:'/',
-                element:<Home></Home>
-            },
-            {
-                path:'Shop',
-                element:<Shop></Shop>
-            },
-            {
-                path:'Cart',
-                element:<Cart></Cart>
-            },
-            {
-                path:'View_Details/:id',
-                element:<View_Details></View_Details>
-            }
-        ]
-    },
-    {
-        path:'/Login',
-        element:<Login></Login>
-    },
-    {
-        path:'/Register',
-        element:<Register></Register>
-    }
-])
+  {
+    path: "/",
+    element: <Layout></Layout>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "Shop",
+        element: <Shop></Shop>,
+      },
+      {
+        path: "Cart",
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+      },
+      {
+        path: "View_Details/:id",
+        element: <View_Details></View_Details>,
+      },
+    ],
+  },
+  {
+    path: "/Login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/Register",
+    element: <Register></Register>,
+  },
+]);
