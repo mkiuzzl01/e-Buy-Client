@@ -1,11 +1,58 @@
 import React from "react";
 
-const Filter_Modal = ({ isOpen, setIsOpen, Products, setCategory }) => {
-  const categories = new Set(Products.map((product) => product.Category));
-  const brandNames = new Set(Products.map((product) => product.BrandName));
+const Filter_Modal = ({ isOpen, setIsOpen, setFilter }) => {
+  const categories = [
+    "Smartphone",
+    "Laptop",
+    "Gaming Console",
+    "Drone",
+    "Smart Home",
+    "Headphones",
+    "Television",
+    "Tablet",
+    "Desktop",
+    "Streaming Device",
+    "Smartwatch",
+    "Camera",
+    "Mouse",
+    "Monitor",
+    "Fitness Tracker",
+    "Earbuds",
+    "Accessories",
+    "Speaker",
+    "Smart Speaker",
+  ];
 
-  const uniqueCategories = Array.from(categories);
-  const uniqueBrandName = Array.from(brandNames);
+  const brandNames = [
+    "Apple",
+    "Asus",
+    "Sony",
+    "DJI",
+    "Google",
+    "Samsung",
+    "Roku",
+    "HP",
+    "Logitech",
+    "LG",
+    "GoPro",
+    "Fitbit",
+    "Canon",
+    "NVIDIA",
+    "Bose",
+    "Dell",
+    "Nikon",
+    "Amazon",
+    "Razer",
+    "Microsoft",
+  ];
+  const priceRange = [
+    "1 to 100",
+    "100 to 200",
+    "200 to 500",
+    "500 to 1000",
+    "1000 to 2000",
+    "2000 to 5000",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,9 +60,7 @@ const Filter_Modal = ({ isOpen, setIsOpen, Products, setCategory }) => {
     const brand = form.Brand.value;
     const category = form.Category.value;
     const price = form.Price.value;
-
-    const info = { brand, category, price };
-    setCategory(info);
+    setFilter({ brand, category, price });
   };
 
   return (
@@ -51,8 +96,10 @@ const Filter_Modal = ({ isOpen, setIsOpen, Products, setCategory }) => {
                   <option disabled selected>
                     Select Brand
                   </option>
-                  {uniqueBrandName.map((BrandName, idx) => (
-                    <option key={idx}>{BrandName}</option>
+                  {brandNames.map((brandName, idx) => (
+                    <option value={brandName} key={idx}>
+                      {brandName}
+                    </option>
                   ))}
                 </select>
                 <select
@@ -62,8 +109,10 @@ const Filter_Modal = ({ isOpen, setIsOpen, Products, setCategory }) => {
                   <option disabled selected>
                     Select Category
                   </option>
-                  {uniqueCategories.map((Category, idx) => (
-                    <option key={idx}>{Category}</option>
+                  {categories.map((Category, idx) => (
+                    <option value={Category} key={idx}>
+                      {Category}
+                    </option>
                   ))}
                 </select>
                 <select
@@ -73,12 +122,11 @@ const Filter_Modal = ({ isOpen, setIsOpen, Products, setCategory }) => {
                   <option disabled selected>
                     Select Price Range
                   </option>
-                  <option value="1 to 100">1 to 100</option>
-                  <option value="100 to 200">100 to 200</option>
-                  <option value="200 to 500">200 to 500</option>
-                  <option value="500 to 1000">500 to 1000</option>
-                  <option value="1000 to 2000">1000 to 2000</option>
-                  <option value="2000 to 5000">2000 to 5000</option>
+                  {priceRange.map((price, idx) => (
+                    <option value={price} key={idx}>
+                      {price}
+                    </option>
+                  ))}
                 </select>
                 <div className="mt-5 sm:flex sm:items-center sm:justify-between">
                   <div className="sm:flex sm:items-center">

@@ -1,43 +1,68 @@
-import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import ProductCard from "../../Share/ProductCard";
 import Loading from "../../Share/Loading";
 import Filter_Modal from "../../Share/Filter_Modal";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import useAuth from "../../../Hooks/useAuth";
 
 const Shop = () => {
+  const { setLoading, loading } = useAuth();
   const axiosPublic = useAxiosPublic();
   const [isOpen, setIsOpen] = useState(false);
-  const [category, setCategory] = useState({});
+  const [filter, setFilter] = useState({});
   const [sort, setSort] = useState("");
   const [search, setSearch] = useState("");
+  const [products, setProducts] = useState([]);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [totalDocuments, setTotalDocuments] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(category);
-  console.log(sort);
-  console.log(search);
+  useEffect(() => {
+    const getData = async () => {
+      setLoading(true);
+      const queryString = new URLSearchParams({
+        search,
+        filter: JSON.stringify(filter),
+        sort,
+        page: currentPage,
+        size: itemsPerPage,
+      }).toString();
 
-  const { data: Products = [], isLoading } = useQuery({
-    queryKey: ["Products"],
-    queryFn: async () => {
-      const { data } = await axiosPublic.get("/Products");
-      return data;
-    },
-  });
-
-  if (isLoading) return <Loading></Loading>;
+      try {
+        const { data } = await axiosPublic.get(`/Products?${queryString}`);
+        setProducts(data.data);
+        setTotalDocuments(data.totalDocuments);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    getData();
+  }, [itemsPerPage, currentPage, search, sort, filter]);
 
   const handleSort = (range) => {
     setSort(range);
   };
+
   const handleSearch = (e) => {
     e.preventDefault();
     const form = e.target;
-    const search = form.search.value;
-    setSearch(search);
+    const searchValue = form.search.value;
+    setSearch(searchValue);
   };
 
+  const numberOfPages = Math.ceil(totalDocuments / itemsPerPage);
+  const pages = [...Array(numberOfPages).keys()].map((element) => element + 1);
+
+  const handlePagination = (value) => {
+    setCurrentPage(value);
+  };
+
+  if(loading) return <Loading></Loading>
+
   return (
-    <div>
+    <div className="my-10">
       <div className="m-4">
         <form onSubmit={handleSearch}>
           <div className="flex items-center ">
@@ -60,8 +85,7 @@ const Shop = () => {
             <Filter_Modal
               isOpen={isOpen}
               setIsOpen={setIsOpen}
-              Products={Products}
-              setCategory={setCategory}
+              setFilter={setFilter}
             ></Filter_Modal>
           </div>
           <div className="dropdown dropdown-hover">
@@ -96,9 +120,42 @@ const Shop = () => {
         </div>
       </div>
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-4">
-        {Products.map((Product, idx) => (
+        {products.map((Product, idx) => (
           <ProductCard Product={Product} key={idx}></ProductCard>
         ))}
+      </div>
+
+      {/* pagination */}
+      <div className="text-center my-10 space-x-4">
+        <button
+          disabled={currentPage === 1}
+          onClick={() => handlePagination(currentPage - 1)}
+          className="btn rounded-none bg-[#CBE4DE] items-center"
+        >
+          <span>
+            <FaArrowLeftLong className="text-blue-400 " />
+          </span>
+          <span>Prev</span>
+        </button>
+        {pages.map((page) => (
+          <button
+            className={currentPage === page ? " btn bg-green-500" : "btn"}
+            onClick={() => handlePagination(page)}
+            key={page}
+          >
+            {page}
+          </button>
+        ))}
+        <button
+          disabled={currentPage === numberOfPages}
+          onClick={() => handlePagination(currentPage + 1)}
+          className="btn rounded-none bg-[#CBE4DE] items-center"
+        >
+          <span>Next</span>
+          <span>
+            <FaArrowRightLong className="text-blue-400 " />
+          </span>
+        </button>
       </div>
     </div>
   );
