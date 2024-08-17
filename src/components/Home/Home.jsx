@@ -1,9 +1,13 @@
+import RecentProductsBanner from "../Share/RecentProductsBanner";
+import TrendingProducts from "../Share/TrendingProducts";
 
 const Home = () => {
 
     return (
         <div>
-            <h1>This is Home Page</h1>
+           <RecentProductsBanner></RecentProductsBanner>
+           <TrendingProducts></TrendingProducts>
+
         </div>
     );
 };

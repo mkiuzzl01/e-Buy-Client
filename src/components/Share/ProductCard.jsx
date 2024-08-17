@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import BuyNowBtn from "./buyNowBtn";
+import ViewDetailsBtn from "./ViewDetailsBtn";
 
 const ProductCard = ({ Product }) => {
+
   return (
     <div>
       <div className="card rounded-none bg-base-100 w-full h-96 shadow-xl">
@@ -22,17 +24,8 @@ const ProductCard = ({ Product }) => {
             </p>
           </div>
           <div className="card-actions justify-between items-center">
-            <Link to={`/View_Details/${Product?.Id}`}>
-              <button title="View Details" className="hover:btn">
-                View Details
-              </button>
-            </Link>
-            <button
-              title="Buy the Product"
-              className="btn rounded-none bg-[#CBE4DE]"
-            >
-              Buy Now
-            </button>
+           <ViewDetailsBtn Product={Product}></ViewDetailsBtn>
+           <BuyNowBtn></BuyNowBtn>
           </div>
         </div>
       </div>
