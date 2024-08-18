@@ -27,7 +27,7 @@ export const route = createBrowserRouter([
       },
       {
         path: "View_Details/:id",
-        element: <View_Details></View_Details>,
+        element: <PrivateRoute><View_Details></View_Details></PrivateRoute>,
       },
     ],
   },

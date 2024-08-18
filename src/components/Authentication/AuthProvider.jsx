@@ -39,7 +39,7 @@ const AuthProvider = ({children}) => {
             unsubscribe();
           };
         });
-      }, []);
+      }, [user]);
 
 
     const shareTools = {registerUser,profileUpdate,loginUser,logOut,loading,setLoading,user,setUser};

@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import Loading from "../../Share/Loading";
+import BuyNowBtn from "../../Share/BuyNowBtn";
 
 const View_Details = () => {
   const { id } = useParams();
@@ -46,12 +47,7 @@ const View_Details = () => {
           Creating time: <span>{creationDateLocal}</span>
         </p>
         <div className="my-4">
-          <button
-            title="Buy the Product"
-            className="btn rounded-none bg-[#CBE4DE]"
-          >
-            Buy Now
-          </button>
+         <BuyNowBtn Product={Product}></BuyNowBtn>
         </div>
       </div>
     </div>

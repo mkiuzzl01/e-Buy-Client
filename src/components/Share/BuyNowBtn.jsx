@@ -2,7 +2,7 @@ import React from "react";
 import useAuth from "../../Hooks/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 const BuyNowBtn = ({ Product }) => {
   const { user } = useAuth();
@@ -10,7 +10,7 @@ const BuyNowBtn = ({ Product }) => {
   const navigate = useNavigate();
 
   const handleBuy = async (Product) => {
-    if (!user) return navigate('/Login')
+    if (!user) return navigate("/Login");
     const userEmail = user?.email;
     const info = { userEmail, Product };
 
